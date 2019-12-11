@@ -1,0 +1,13 @@
+{
+    "name": "antonforwork/tochka-bank",
+    "description": "Tochka Bank API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "antonforwork",
+            "email": "me@anton.in.ua"
+        }
+    ],
+    "require": {}
+}
