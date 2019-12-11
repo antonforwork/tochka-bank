@@ -10,8 +10,10 @@
     }
   ],
   "require": {
-    "guzzlehttp/guzzle": "~6"
+    "guzzlehttp/guzzle": "~6",
+    "lazyjsonmapper/lazyjsonmapper": "~1"
   },
+  "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
       "TochkaBank\\": "src/"
