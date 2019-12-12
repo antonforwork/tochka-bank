@@ -4,6 +4,7 @@ namespace TochkaBank;
 
 use GuzzleHttp\Exception\ClientException;
 use TochkaBank\Api\Account;
+use TochkaBank\Api\Statement;
 use TochkaBank\Exceptions\InvalidArgumentException;
 use GuzzleHttp\Client as HttpClient;
 use TochkaBank\Exceptions\InvalidJWTToken;
@@ -15,7 +16,16 @@ class Client
 
     protected $jwt = null;
 
+    /**
+     * @var Account
+     */
     public $account;
+
+    /**
+     * @var Statement
+     */
+    public $statement;
+
 
     /**
      * @var HttpClient
@@ -33,6 +43,7 @@ class Client
         $this->setJwt($jwt);
         $this->configureGuzzle($guzzleOptions);
         $this->account = new Account($this);
+        $this->statement = new Statement($this);
     }
 
     /**
@@ -64,7 +75,8 @@ class Client
     }
 
     /**
-     * Return prefix api path, for sandbox = sandbox/
+     * Возвращает префикс апи
+     *
      * @return string
      */
     protected function getPrefixApiPath()

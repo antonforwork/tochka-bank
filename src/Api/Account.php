@@ -20,6 +20,8 @@ class Account
 
 
     /**
+     * Возвращает список доступных организаций
+     *
      * @return Organization[]
      * @throws InvalidJWTToken
      */
@@ -29,6 +31,8 @@ class Account
     }
 
     /**
+     * Возвращает список доступных счетов
+     *
      * @return BankAccount[]
      * @throws InvalidJWTToken
      */
